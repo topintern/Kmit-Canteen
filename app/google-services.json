@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "651162663670",
+    "firebase_url": "https://kmit-canteen.firebaseio.com",
+    "project_id": "kmit-canteen",
+    "storage_bucket": "kmit-canteen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651162663670:android:d1a51a1f0e48f1f8",
+        "android_client_info": {
+          "package_name": "com.example.kmitcanteen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "651162663670-4hbku1cdm1nlbu0jsphl6qck7rm22fer.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kmitcanteen",
+            "certificate_hash": "be036d3c6cfa4599aec0d221d334977aed494653"
+          }
+        },
+        {
+          "client_id": "651162663670-on0jevcp0q5pd792td76h3vnfohu8dq4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlU5bR9CwBlCmuWNW3ET17VfJ-pDRA2To"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "651162663670-on0jevcp0q5pd792td76h3vnfohu8dq4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

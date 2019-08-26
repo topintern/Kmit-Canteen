@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Kmit canteen</string>
+    <string name="slogan">Kmits  very  first  canteen  app</string>
+    <string name="Rollno">Rollno</string>
+    <string name="ans">17BD1A052H</string>
+    <string name="name">Name</string>
+    <string name="nam">Neel Lohit</string>
+    <string name="password">Password</string>
+    <string name="pass">neel123</string>
+    <string name="SignIn">SignIn</string>
+    <string name="SignUp">SignUp</string>
+
+
+</resources>
