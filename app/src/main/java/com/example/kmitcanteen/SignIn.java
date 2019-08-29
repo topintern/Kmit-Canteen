@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.kmitcanteen.Common.Common;
 import com.example.kmitcanteen.Model.Rollno;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -46,7 +47,11 @@ public class SignIn extends AppCompatActivity {
                             mDialog.dismiss();
                             Rollno rollno = dataSnapshot.child(edtroll.getText().toString()).getValue(Rollno.class);
                             if (rollno.getPassword().equals(edtpass.getText().toString())) {
-                                Toast.makeText(SignIn.this, "sign in successfully !", Toast.LENGTH_SHORT).show();
+                                //Toast.makeText(SignIn.this, "sign in successfully !", Toast.LENGTH_SHORT).show();
+                                Intent homeIntent= new Intent(SignIn.this,Home.class);
+                                Common.currentuser=rollno;
+                                startActivity(homeIntent);
+                                finish();
                             } else {
                                 Toast.makeText(SignIn.this, "sign in failed !", Toast.LENGTH_SHORT).show();
 
