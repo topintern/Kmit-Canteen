@@ -46,6 +46,7 @@ public class SignIn extends AppCompatActivity {
                         if(dataSnapshot.child(edtroll.getText().toString()).exists()) {
                             mDialog.dismiss();
                             Rollno rollno = dataSnapshot.child(edtroll.getText().toString()).getValue(Rollno.class);
+                            //rollno.setRollno(edtroll.getText().toString());
                             if (rollno.getPassword().equals(edtpass.getText().toString())) {
                                 //Toast.makeText(SignIn.this, "sign in successfully !", Toast.LENGTH_SHORT).show();
                                 Intent homeIntent= new Intent(SignIn.this,Home.class);

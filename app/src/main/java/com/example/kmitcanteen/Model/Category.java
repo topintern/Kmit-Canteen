@@ -8,7 +8,7 @@ public class Category {
 
     }
 
-    public Category(String name, String image) {
+    public Category(String image, String name) {
         Name = name;
         Image = image;
     }
