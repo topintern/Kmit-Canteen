@@ -3,7 +3,8 @@ package com.example.kmitcanteen.Model;
 public class Rollno {
     private  String Name;
     private  String Password;
-    private String Rollno;
+    private String rollno;
+
 
     public Rollno(String name,String password)//,String rollno)
     {
@@ -11,20 +12,10 @@ public class Rollno {
         Password=password;
         //Rollno=rollno;
     }
+     public Rollno()
+     {
 
-    public String getRollno() {
-        return Rollno;
-    }
-
-    public void setRollno(String rollno) {
-        Rollno = rollno;
-    }
-
-    public  Rollno()
-    {
-
-    }
-
+     }
     public String getName() {
         return Name;
     }
@@ -33,14 +24,15 @@ public class Rollno {
         Name = name;
     }
 
-
-    public void setPassword(String password) {
-        Password = password;
-    }
-
     public String getPassword() {
         return Password;
     }
 
+    public String getRollno() {
+        return rollno;
+    }
 
+    public void setRollno(String rollno) {
+        this.rollno = rollno;
+    }
 }
