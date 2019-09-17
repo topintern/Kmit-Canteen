@@ -9,35 +9,27 @@ public class Request {
     private List<Order> foods;
     private String status;
     private String ready;
+    private String paymentState;
 
-    public String getReady() {
-        return ready;
-    }
 
-    public void setReady(String ready) {
-        this.ready = ready;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public Request()
-    {
+    public Request() {
 
     }
 
-    public Request(String rollno, String name,String total,List<Order>foods) {
+    public Request(String rollno, String name, String total, String status,String paymentState, List<Order> foods) {
         this.rollno = rollno;
         this.name = name;
-        this.total=total;
-        this.foods=foods;
+        this.total = total;
+        this.foods = foods;
+        this.status = status;
+        this.paymentState = paymentState;
+    }
+    public Request(String rollno, String name, String total, List<Order> foods) {
+        this.rollno = rollno;
+        this.name = name;
+        this.total = total;
+        this.foods = foods;
         this.status="0";
-
     }
 
     public String getRollno() {
@@ -71,5 +63,31 @@ public class Request {
     public void setFoods(List<Order> foods) {
         this.foods = foods;
     }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getReady() {
+        return ready;
+    }
+
+    public void setReady(String ready) {
+        this.ready = ready;
+    }
+
+    public String getPaymentState() {
+        return paymentState;
+    }
+
+    public void setPaymentState(String paymentState) {
+        this.paymentState = paymentState;
+    }
 }
+
+
 

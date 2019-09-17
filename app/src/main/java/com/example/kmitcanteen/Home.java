@@ -8,6 +8,7 @@ import android.os.Bundle;
 import com.example.kmitcanteen.Common.Common;
 import com.example.kmitcanteen.Interface.ItemClickListener;
 import com.example.kmitcanteen.Model.Category;
+import com.example.kmitcanteen.Service.ListenOrder;
 import com.example.kmitcanteen.ViewHolder.MenuViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -93,7 +94,11 @@ public class Home extends AppCompatActivity
         layoutManager = new LinearLayoutManager(this);
         recycler_menu.setLayoutManager(layoutManager);
 
-       loadMenu();
+
+        loadMenu();
+        Intent service=new Intent(Home.this, ListenOrder.class);
+        startService(service);
+
     }
 
     private void loadMenu() {

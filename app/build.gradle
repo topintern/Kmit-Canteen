@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.kmitcanteen"
-        minSdkVersion 17
+        minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -44,6 +44,9 @@ dependencies {
     implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
     implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
     implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.android.gms:play-services-wallet:18.0.0'
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
+    implementation 'com.razorpay:checkout:1.5.12'
 
 
 }

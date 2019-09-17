@@ -1,16 +1,33 @@
 package com.example.kmitcanteen.Model;
 
 public class Order {
+    private int ID;
     private String ProductId;
     private String ProductName;
     private String Quantity;
     private String Price;
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
 
     public Order(){
 
     }
 
     public Order(String productId, String productName, String quantity, String price) {
+        ProductId = productId;
+        ProductName = productName;
+        Quantity = quantity;
+        Price = price;
+    }
+
+    public Order(int ID, String productId, String productName, String quantity, String price) {
+        this.ID = ID;
         ProductId = productId;
         ProductName = productName;
         Quantity = quantity;
