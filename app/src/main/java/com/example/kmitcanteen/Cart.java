@@ -77,9 +77,9 @@ static PayPalConfiguration config =new PayPalConfiguration().environment(PayPalC
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
 
-        /*Intent intent= new Intent(this, PayPalService.class);
+        Intent intent= new Intent(this, PayPalService.class);
         intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,config);
-        startService(intent);*/
+        startService(intent);
 
         //Firebase
         database = FirebaseDatabase.getInstance();
@@ -114,11 +114,11 @@ static PayPalConfiguration config =new PayPalConfiguration().environment(PayPalC
         adapter.notifyDataSetChanged();
         recyclerView.setAdapter(adapter);
 
-        // Kalkulasi total harga
+
         int total = 0;
         for(Order order:cart)
             total+=(Integer.parseInt(order.getPrice())) * (Integer.parseInt(order.getQuantity()));
-        Locale locale = new Locale("en","IN");
+        Locale locale = new Locale("en","US");
         NumberFormat fmt = NumberFormat.getCurrencyInstance(locale);
 
         txtTotalPrice.setText(fmt.format(total));
@@ -154,7 +154,7 @@ static PayPalConfiguration config =new PayPalConfiguration().environment(PayPalC
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 // Create new Request
-                Request request=new Request(Common.currentuser.getRollno(),
+                /*Request request=new Request(Common.currentuser.getRollno(),
                         Common.currentuser.getName(),
                         txtTotalPrice.getText().toString(),
                         cart);
@@ -167,9 +167,9 @@ static PayPalConfiguration config =new PayPalConfiguration().environment(PayPalC
                 new Database(getBaseContext()).cleanCart();
                 Toast.makeText(Cart.this, "Your Order has been Placed!", Toast.LENGTH_SHORT).show();
                 finish();
+               */
 
-
-                /* String formatAmount =txtTotalPrice.getText().toString().trim().replace("$","")
+                 String formatAmount =txtTotalPrice.getText().toString().trim().replace("$","")
                         .replace(",","");
                 float amount= Float.parseFloat(formatAmount);
                 PayPalPayment payPalPayment=new PayPalPayment(new BigDecimal(formatAmount),"USD","Kmit Canteen app order"
@@ -177,7 +177,7 @@ static PayPalConfiguration config =new PayPalConfiguration().environment(PayPalC
                 Intent intent=new Intent(getApplicationContext(), PaymentActivity.class);
                 intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,config);
                 intent.putExtra(PaymentActivity.EXTRA_PAYMENT,payPalPayment);
-                startActivityForResult(intent,PAYPAL_REQUEST_CODE);*/
+                startActivityForResult(intent,PAYPAL_REQUEST_CODE);
 
                 /*
 
@@ -196,7 +196,7 @@ static PayPalConfiguration config =new PayPalConfiguration().environment(PayPalC
         alertDialog.show();
     }
 
-    /*
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode==PAYPAL_REQUEST_CODE)
@@ -238,5 +238,5 @@ static PayPalConfiguration config =new PayPalConfiguration().environment(PayPalC
              else if (resultCode==PaymentActivity.RESULT_EXTRAS_INVALID)
                 Toast.makeText(this,"Invalid Payment",Toast.LENGTH_SHORT).show();
         }
-    } */
+    }
 }

@@ -67,15 +67,7 @@ public class FoodViewHolder extends RecyclerView.ViewHolder implements View.OnCl
 
 
 
-       button.setOnClickListener(new View.OnClickListener() {
-                         @Override
-                         public void onClick(View view) {
-                            /* Intent foodDetail = new Intent(view.getContext(),FoodDetail.class);
-                             foodDetail.putExtra("FoodId", getAdapterPosition()); //Send food Id to new activity
-                             view.getContext().startActivity(foodDetail); */
-
-                         }
-        });
+      
 
 
 

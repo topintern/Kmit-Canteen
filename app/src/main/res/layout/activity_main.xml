@@ -23,7 +23,7 @@
         <ImageView
             android:id="@+id/title"
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="280dp"
             android:layout_gravity="top"
             android:padding="40dp"
             android:src="@drawable/canteen" />
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/slogan"
-            android:textColor="@android:color/white"
+            android:textColor="@android:color/holo_red_dark"
             android:textSize="20sp" />
     </LinearLayout>
     <LinearLayout

@@ -46,6 +46,17 @@ public class Database extends SQLiteAssetHelper {
                 order.getProductName(),
                 order.getQuantity(),
                 order.getPrice());
+
+        /*String query=String.format("IF EXISTS (SELECT * FROM OrderDetail WHERE ID = %s)" +
+                " BEGIN UPDATE OrderDetail set Quantity=Quantity+%s where ID=%s END" +
+                        "ELSE BEGIN INSERT INTO OrderDetail(ProductId,ProductName,Quantity,Price) VALUES ('%s','%s','%s','%s'); END",
+                order.getProductId(),
+                order.getQuantity(),
+                order.getProductId(),
+                order.getProductId(),
+                order.getProductName(),
+                order.getQuantity(),
+                order.getPrice());*/
         db.execSQL(query);
     }
     public void cleanCart()
